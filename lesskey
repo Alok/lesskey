@@ -1,0 +1,26 @@
+#command
+[ prev-file
+] next-file
+
+#command
+Q quit \1
+:cq quit \1
+
+#command
+D noaction j/\^diff|commit|From \n\eu
+
+#line-edit
+\ed     word-delete
+
+#line-edit
+\eD     word-delete
+
+#line-edit
+^W      word-backspace
+
+#line-edit
+^U      kill-line
+
+#command
+\ed shell rm "%"\n:n\n
+# ^P shell $HOME/bin/format-and-restore-timestamp.sh "%" -o "%"\n:n\n
