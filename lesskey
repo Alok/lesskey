@@ -1,6 +1,7 @@
 #command
 [ prev-file
 ] next-file
+c undo-hilite
 
 #command
 Q quit \1
@@ -22,5 +23,5 @@ D noaction j/\^diff|commit|From \n\eu
 ^U      kill-line
 
 #command
-\ed shell rm "%"\n:n\n
+# \ed shell rm "%"\n:n\n
 # ^P shell $HOME/bin/format-and-restore-timestamp.sh "%" -o "%"\n:n\n
